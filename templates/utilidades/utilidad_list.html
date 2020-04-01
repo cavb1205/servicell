@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Lista de Utilidades</h1>
+    <a href="{% url 'utilidades:new' %}">Agregar</a>
+    {% for utilidad in utilidad_list %}
+        <li><a href="{% url 'utilidades:detail' utilidad.id %}">{{utilidad.id}}</a> - {{utilidad.descripcion}} - {{utilidad.valor}}</li>
+    {% endfor %}
+{% endblock %}

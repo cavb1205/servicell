@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Utilidad No.{{utilidad.id}}</h1>
+    <h2>Descripcion: {{utilidad.descripcion}}</h2>
+    <h2>Valor: {{utilidad.valor}}</h2>
+
+    
+    <a href="{% url 'utilidades:list'%}">Lista de Utilidades</a>
+    <a href="{% url 'utilidades:update' utilidad.id%}">Editar Registro</a>
+    <a href="{% url 'utilidades:delete' utilidad.id%}">Eliminar Registro</a>
+{% endblock %}
