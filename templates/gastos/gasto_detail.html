@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Gasto No.{{gasto.id}}</h1>
+    <h2>Tipo de gasto: {{gasto.gasto_id}}</h2>
+    <h2>Descripcion: {{gasto.descripcion}}</h2>
+    <h2>Valor: {{gasto.valor}}</h2>
+
+    
+    <a href="{% url 'gastos:list'%}">Lista de Gastos</a>
+    <a href="{% url 'gastos:update' gasto.id%}">Editar Registro</a>
+    <a href="{% url 'gastos:delete' gasto.id%}">Eliminar Registro</a>
+{% endblock %}

@@ -23,4 +23,5 @@ urlpatterns = [
     path('', views.home),  ##pagina principal
     path('almacen/', include('almacenes.urls')),
     path('inversion/', include('inversiones.urls')),
+    path('gasto/', include('gastos.urls')),
 ]

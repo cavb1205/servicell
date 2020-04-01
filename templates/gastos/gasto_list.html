@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Lista de Gastos</h1>
+    <a href="{% url 'gastos:new' %}">Agregar</a>
+    {% for gasto in gasto_list %}
+        <li><a href="{% url 'gastos:detail' gasto.id %}">{{gasto.id}}</a> - {{gasto.gasto_id}} - {{gasto.descripcion}} - {{gasto.valor}}</li>
+    {% endfor %}
+{% endblock %}
