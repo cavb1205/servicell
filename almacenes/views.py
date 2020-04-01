@@ -4,7 +4,7 @@ from .models import Almacen
 
 
 def home(request):
-    return render(request, 'almacenes/base.html')
+    return render(request, 'base.html')
 
 
 def index(request):
