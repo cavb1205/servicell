@@ -1,3 +1,5 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Utilidad
+
+admin.site.register(Utilidad)
