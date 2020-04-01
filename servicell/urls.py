@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home),  ##pagina principal
     path('almacen/', include('almacenes.urls')),
+    path('inversion/', include('inversiones.urls')),
 ]
