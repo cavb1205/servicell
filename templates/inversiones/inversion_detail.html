@@ -4,4 +4,9 @@
     <h1>Inversion No.{{inversion.id}}</h1>
     <h2>Descripcion: {{inversion.descripcion}}</h2>
     <h2>Valor: {{inversion.valor}}</h2>
+
+    
+    <a href="{% url 'inversiones:list'%}">Lista de Inversiones</a>
+    <a href="{% url 'inversiones:update' inversion.id%}">Editar Registro</a>
+    <a href="{% url 'inversiones:delete' inversion.id%}">Eliminar Registro</a>
 {% endblock %}

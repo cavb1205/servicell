@@ -2,6 +2,7 @@
 
 {% block content %}
     <h1>Lista de Inversiones</h1>
+    <a href="{% url 'inversiones:new' %}">Agregar</a>
     {% for inversion in inversion_list %}
         <li><a href="{% url 'inversiones:detail' inversion.id %}">{{inversion.id}}</a> - {{inversion.descripcion}} - {{inversion.valor}}</li>
     {% endfor %}
